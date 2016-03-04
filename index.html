@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather IMIE</title>
+    <link rel="stylesheet" href="./public/stylesheets/jquery-ui-1.10.4.custom.css">
+    <link rel="stylesheet" href="./public/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="./public/stylesheets/style.css">
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar">Navigation item 1</span>
+                <span class="icon-bar">Navigation item 2</span>
+                <span class="icon-bar">Navigation item 3</span>
+            </button>
+            <a class="navbar-brand" href="#">Imie Weather</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Accueil</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Rechercher</h1>
+                </div>
+                <div class="panel-body">
+                    <form action="#" method="post" id="searchForm" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="textSearch" class="col-sm-3 control-label">Ville :</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="textSearch" id="textSearch" class="form-control">
+                            </div>
+
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <input type="submit" id="submitSearch" value="go" class="btn btn-default">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="panel panel-primary" id="result">
+                <div class="panel-heading">
+                    <h1 class="panel-title" id="cityTitle"></h1>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img alt="" src="" id="map"/>
+                        </div>
+                        <div id="info">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-7 text-right"><Strong>Heure de mesure :</strong></div>
+                                    <div class="col-md-5" id="dt"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-7 text-right"><Strong>Levé du soleil :</strong></div>
+                                    <div class="col-md-5" id="sunrise"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-7 text-right"><Strong>Couché du soleil :</strong></div>
+                                    <div class="col-md-5" id="sunset"></div>
+                                </div>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-md-7 text-right"><Strong>Humidité :</strong></div>
+                                    <div class="col-md-5"><span id="humidity"></span> %</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-7 text-right"><Strong>Pression :</strong></div>
+                                    <div class="col-md-5"><span id="pressure"></span> hPA</div>
+                                </div>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-md-7 text-right"><Strong>Vitesse du vent :</strong></div>
+                                    <div class="col-md-5"><span id="windSpeed"></span> km/h</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <img alt="" src="" id="imgWeather"/>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="row">
+                                    <div><strong><span id="temp"></span>°C</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary" id="forecast">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Prévision</h1>
+                </div>
+                <div class="panel-body" id="forecastInfo">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="./public/javascripts/jquery.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="./public/javascripts/data.js"></script>
+<script src="./public/javascripts/city.js"></script>
+<script src="./public/javascripts/app.js"></script>
+</body>
+</html>

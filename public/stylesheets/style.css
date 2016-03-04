@@ -1,0 +1,25 @@
+body {
+  padding-top: 50px;
+}
+.main {
+  padding: 40px 15px;
+}
+#result, #prevision, #alert{
+  /*  display : none;*/
+}
+
+#imgWeather{
+  max-width: 165px;
+  max-height: 165px;
+}
+
+#temp{
+  font-size: 2.5em;
+}
+
+.day{
+  min-height: 148px;
+}
+.thumbnail{
+  text-align: center;
+}
